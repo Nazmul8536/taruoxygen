@@ -1,0 +1,33 @@
+.form-control {
+    border: 1px solid #3e4d74;
+    font-size: 12px;
+    height: 38px;
+}
+
+.btn-gradient-primary {
+    background: -webkit-gradient(linear, left top, right top, from(#439b66), to(#0f8843));
+    background: linear-gradient(to right, #439b66, #0f8843);
+    border: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.ck-editor__editable_inline {
+    min-height: 200px;
+}
+
+select.form-control {
+	outline: 1px solid #3e4d74;
+}
+
+.card-header {
+	background-color: #1e4858;
+	color: #fff;
+}
+
+.modal-header {
+    background-color: #1e4858;
+    color: #fff;
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
+    padding: 0.6rem 1rem;
+}
