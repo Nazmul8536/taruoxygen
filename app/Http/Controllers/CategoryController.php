@@ -1,19 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Category as AppCategory;
+use App\core\category\category;
+use App\Core\categoryDetails;
 
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Config\Repository;
 
 class CategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $category;
+    private $config;
+
+    public function __construct(category $category,Repository $config)
+    {
+        $this->category = $category;
+
+        $this->config = $config;
+    }
+
+
     public function index()
     {
-        return view('admin.categories.category');
+        $category = $this->category->categoryList();
+        return view('admin.categories.category_list',compact('category'));
     }
 
     /**
